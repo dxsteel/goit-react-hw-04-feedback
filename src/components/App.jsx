@@ -11,8 +11,7 @@ export const App = () => {
 
   const options = ['good', 'neutral', 'bad'];
 
-  const countTotalFeedback = () =>  good + neutral + bad ;
-    
+  const countTotalFeedback = () => good + neutral + bad;
 
   const countPositiveFeedbackPercentage = () => {
     const total = countTotalFeedback();
@@ -24,10 +23,10 @@ export const App = () => {
       case options[0]:
         setGood(prevState => prevState + 1);
         break;
-        case options[1]:
+      case options[1]:
         setNeutral(prevState => prevState + 1);
         break;
-        case options[2]:
+      case options[2]:
         setBad(prevState => prevState + 1);
         break;
       default:
@@ -35,33 +34,30 @@ export const App = () => {
     }
   };
 
-  
-    
-    const totalFeedback = countTotalFeedback();
-    const positiveFeedbackPercentage = Number(countPositiveFeedbackPercentage());
+  const totalFeedback = countTotalFeedback();
+  const positiveFeedbackPercentage = Number(countPositiveFeedbackPercentage());
 
-    return (
-      <div className="container">
-        <Section title="Please leave feedback">
-          <FeedbackOptions
-            options={Object.keys({ good, neutral, bad})}
-            onLeaveFeedback={onLeaveFeedback}
+  return (
+    <div className="container">
+      <Section title="Please leave feedback">
+        <FeedbackOptions
+          options={Object.keys({ good, neutral, bad })}
+          onLeaveFeedback={onLeaveFeedback}
+        />
+      </Section>
+      <Section title="Statistics">
+        {totalFeedback ? (
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={totalFeedback}
+            positivePercentage={positiveFeedbackPercentage}
           />
-        </Section>
-        <Section title="Statistics">
-          {totalFeedback ? (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={totalFeedback}
-              positivePercentage={positiveFeedbackPercentage}
-            />
-          ) : (
-            <Notification message="There is no feedback" />
-          )}
-        </Section>
-      </div>
-    );
-
-}
+        ) : (
+          <Notification message="There is no feedback" />
+        )}
+      </Section>
+    </div>
+  );
+};

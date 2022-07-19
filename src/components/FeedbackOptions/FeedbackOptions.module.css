@@ -1,38 +1,38 @@
 .btn {
-    width: 150px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    color: #fff;
-    z-index: 1;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.5s;
-    backdrop-filter: blur(15px);
-    margin-bottom: 10px;
-    cursor: pointer;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: #fff;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .btn:hover:first-child {
-    background: #56ab2f;
-    box-shadow: 0 0 5px #56ab2f, 0 0 15px #56ab2f, 0 0 30px #56ab2f,
-        0 0 60px #56ab2f;
+  background: #56ab2f;
+  box-shadow: 0 0 5px #56ab2f, 0 0 15px #56ab2f, 0 0 30px #56ab2f,
+    0 0 60px #56ab2f;
 }
 
 .btn:hover:nth-child(2n) {
-    background: #ffd89b;
-    box-shadow: 0 0 5px #ffd89b, 0 0 15px #ffd89b, 0 0 30px #ffd89b,
-        0 0 60px #ffd89b;
+  background: #ffd89b;
+  box-shadow: 0 0 5px #ffd89b, 0 0 15px #ffd89b, 0 0 30px #ffd89b,
+    0 0 60px #ffd89b;
 }
 
 .btn:hover:last-child {
-    background: #f00;
-    box-shadow: 0 0 5px #f00, 0 0 15px #f00, 0 0 30px #f00, 0 0 60px #f00;
+  background: #f00;
+  box-shadow: 0 0 5px #f00, 0 0 15px #f00, 0 0 30px #f00, 0 0 60px #f00;
 }
